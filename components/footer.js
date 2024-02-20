@@ -16,7 +16,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-8 border-t border-charcoal-gray pt-6">
-                    <p className="text-sm text-gray-600">&copy; 2024 Artiscape. All rights reserved.</p>
+                    <p className="text-sm text-white/70">&copy; 2024 Artiscape. All rights reserved.</p>
                 </div>
             </div>
         </footer>

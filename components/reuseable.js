@@ -11,19 +11,19 @@ export const featuredWork = [
     {
       id: 1,
       title: 'Architecture Project',
-      imageUrl: '/images/architecture.jpg',
+      imageUrl: '/architecture.jpg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
     {
       id: 2,
       title: 'Photography Series',
-      imageUrl: '/images/photography.jpg',
+      imageUrl: '/photography-2.jpg',
       description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       id: 3,
       title: 'Makeup Artistry Showcase',
-      imageUrl: '/images/makeup.jpg',
+      imageUrl: '/make-up.jpg',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
 ];

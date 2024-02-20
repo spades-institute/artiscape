@@ -7,19 +7,19 @@ export const portfolioItems = [
     id: 1,
     title: 'Architecture Project 1',
     category: 'Architecture',
-    imageUrl: '/images/portfolio/architecture1.jpg',
+    imageUrl: '/architecture.jpg',
   },
   {
     id: 2,
     title: 'Photography Series 1',
     category: 'Photography',
-    imageUrl: '/images/portfolio/photography1.jpg',
+    imageUrl: '/photography-1.jpg',
   },
   {
     id: 3,
     title: 'Makeup Artistry Showcase 1',
     category: 'Makeup Artistry',
-    imageUrl: '/images/portfolio/makeup1.jpg',
+    imageUrl: '/make-up.jpg',
   },
   // Add more portfolio items as needed
 ];

@@ -16,10 +16,10 @@ const aboutData = {
       "Makeup Artist of the Month - May 2021",
     ],
     photoGallery: [
-      "/images/about/photo1.jpg",
-      "/images/about/photo2.jpg",
-      "/images/about/photo3.jpg",
-      "/images/about/photo4.jpg",
+      "/architecture.jpg",
+      "/photography-2.jpg",
+      "/make-up.jpg",
+      "/photography-1.jpg",
     ],
   };
   
