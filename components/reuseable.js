@@ -28,6 +28,16 @@ export const featuredWork = [
     },
 ];
 
+export function PortfolioImageCard({ item, project }) {
+
+    return (
+        <div className="bg-white shadow-lg dark:bg-light-gray px-2 pt-2 pb-4">
+            <Image width={500} height={500} src={item.url} alt={`${project.title + ' ' + 1} Image`} className="rounded w-auto" />
+            <h2 className="font-bold text-gray-700 mt-2">{item.description}</h2>
+        </div>
+    )
+}
+
 export function DarkModeBtn() {
     const [darkMode, setDarkMode] = React.useState(false);
   
@@ -67,7 +77,7 @@ export function PortfolioItem({ item }) {
                 <Image
                     width={500}
                     height={500}
-                    src={item.imageUrl[0]}
+                    src={item.imageUrl[0].url}
                     alt={`${item.title} Image`}
                     className="object-cover object-center w-full h-72 transform group-hover:scale-105 transition duration-300"
                 />
@@ -83,7 +93,7 @@ export function PortfolioItem({ item }) {
 export function SocialMediaLinks() {
 
     return (
-        <div className="flex space-x-4 text-2xl">
+        <div className="flex space-x-4 text-2xl mt-8">
             <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800">
                 <FaXTwitter />
             </a>

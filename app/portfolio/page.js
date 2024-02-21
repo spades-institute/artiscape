@@ -1,5 +1,4 @@
 import { PortfolioItem } from '@/components/reuseable';
-import Link from 'next/link';
 
 // Dummy data for portfolio items
 export const portfolioItems = [
@@ -7,19 +6,34 @@ export const portfolioItems = [
     id: 1,
     title: 'Architecture Project 1',
     category: 'Architecture',
-    imageUrl: ['/architecture.jpg', '/architecture.jpg', '/architecture.jpg', '/architecture.jpg',],
+    imageUrl: [
+      { url: '/architecture.jpg', description: 'Image Description 1' },
+      { url: '/architecture.jpg', description: 'Image Description 2' },
+      { url: '/architecture.jpg', description: 'Image Description 3' },
+      { url: '/architecture.jpg', description: 'Image Description 4' },
+    ],
   },
   {
     id: 2,
     title: 'Photography Series 1',
     category: 'Photography',
-    imageUrl: ['/photography-1.jpg', '/photography-1.jpg', '/photography-1.jpg', '/photography-1.jpg'],
+    imageUrl: [
+      { url: '/photography-2.jpg', description: 'Image Description 1' },
+      { url: '/photography-1.jpg', description: 'Image Description 2' },
+      { url: '/photography-2.jpg', description: 'Image Description 3' },
+      { url: '/photography-1.jpg', description: 'Image Description 4' },
+    ],
   },
   {
     id: 3,
     title: 'Makeup Artistry Showcase 1',
     category: 'Makeup Artistry',
-    imageUrl: ['/make-up.jpg', '/make-up.jpg', '/make-up.jpg', '/make-up.jpg', '/make-up.jpg'],
+    imageUrl: [
+      { url: '/make-up.jpg', description: 'Image Description 1' },
+      { url: '/make-up.jpg', description: 'Image Description 2' },
+      { url: '/make-up.jpg', description: 'Image Description 3' },
+      { url: '/make-up.jpg', description: 'Image Description 4' },
+    ],
   },
   // Add more portfolio items as needed
 ];

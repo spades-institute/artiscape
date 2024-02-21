@@ -1,9 +1,13 @@
+'use client'
 
 import React from "react";
+import { useRouter } from "next/navigation";
 import { portfolioItems } from "../page";
-import Image from "next/image";
+import { PortfolioImageCard } from "@/components/reuseable";
+import { CgArrowLeft } from "react-icons/cg";
 
 export default function PortfolioDetailPage({ params }) {
+    const router = useRouter();
     const portfolioItemsData = portfolioItems;
     const search = params.slug;
 
@@ -17,10 +21,11 @@ export default function PortfolioDetailPage({ params }) {
 
     return (
         <div className="container mx-auto my-12 px-2">
+            <p className="text-indigo-600 underline underline-offset-2 flex items-center gap-2 mb-8 cursor-pointer" onClick={() => router.back()}><CgArrowLeft /> Back to portfolio page</p>
             <h1 className="text-center text-3xl font-bold text-gray-800 dark:text-white mb-8">{project.title}</h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {project.imageUrl.map((item, index) => (
-                    <Image key={index} width={500} height={500} src={item} alt={`${project.title + 1} Image`} className="rounded w-auto bg-white shadow-lg dark:bg-light-gray px-2 pt-2 pb-4" />
+                    <PortfolioImageCard key={index} item={item} project={project} />
                 ))}
             </div>
         </div>

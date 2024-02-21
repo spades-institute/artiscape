@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Artiscape",
   description: "Portfolio website powered by spades",
-  icons: '/favicon.ico'
+  icons: '/SPADES.ICO'
 };
 
 export default function RootLayout({ children }) {
