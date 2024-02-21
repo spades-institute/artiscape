@@ -1,3 +1,7 @@
+'use client'
+
+import React from "react";
+import { useIsVisible } from "@/components/useIsVisible";
 import Image from "next/image";
 
 // Dummy data for the About Page
@@ -21,18 +25,21 @@ const aboutData = {
       "/make-up.jpg",
       "/photography-1.jpg",
     ],
-  };
+};
   
 export default function AboutPage() {
+    const ref = React.useRef();
+    const isVisible1 = useIsVisible(ref);
+
     return (
         <main className="max-w-7xl mx-auto px-4 py-8">
-            <section className="mb-8">
+            <section ref={ref} className="mb-8">
                 <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Personal Bio</h1>
-                <p className="text-gray-600 dark:text-gray-400">{aboutData.bio}</p>
+                <p className={`text-gray-600 dark:text-gray-400 transition-opacity ease-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>{aboutData.bio}</p>
             </section>
             <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Skills and Expertise</h2>
-                <ul className="list-disc list-inside">
+                <ul ref={ref} className={`list-disc list-inside transition-opacity ease-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
                     {aboutData.skills.map((skill, index) => (
                         <li key={index} className="text-gray-600 dark:text-gray-400">{skill}</li>
                     ))}
@@ -40,7 +47,7 @@ export default function AboutPage() {
             </section>
             <section className="mb-8">
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Awards and Recognition</h2>
-                <ul className="list-disc list-inside">
+                <ul ref={ref} className={`list-disc list-inside transition-opacity ease-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
                     {aboutData.awards.map((award, index) => (
                         <li key={index} className="text-gray-600 dark:text-gray-400">{award}</li>
                     ))}
@@ -48,9 +55,9 @@ export default function AboutPage() {
             </section>
             <section>
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Photo Gallery</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div ref={ref} className={`grid grid-cols-2 md:grid-cols-4 gap-4 transition-opacity ease-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
                     {aboutData.photoGallery.map((photo, index) => (
-                        <Image width={500} height={500} key={index} src={photo} alt={`Photo ${index + 1}`} className="w-full h-auto rounded-md shadow-md" />
+                        <Image width={500} height={500} key={index} src={photo} alt={`Photo ${index + 1}`} className={"w-full h-auto rounded-md shadow-md"} />
                     ))}
                 </div>
             </section>

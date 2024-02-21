@@ -3,14 +3,14 @@
 import { useRef, useState } from 'react';
 import { useIsVisible } from './useIsVisible';
 
-const ContactForm = () => {
+const BookingForm = () => {
   const ref = useRef();
   const isVisible1 = useIsVisible(ref);
 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    date: '',
     message: ''
   });
 
@@ -30,7 +30,7 @@ const ContactForm = () => {
     setFormData({
       name: '',
       email: '',
-      subject: '',
+      date: '',
       message: ''
     });
   };
@@ -62,19 +62,19 @@ const ContactForm = () => {
                 />
             </div>
             <div className="mb-4">
-                <label htmlFor="subject" className="block text-gray-700 dark:text-gray-400 font-medium mb-1">Subject</label>
+                <label htmlFor="date" className="block text-gray-700 dark:text-gray-400 font-medium mb-1">Date</label>
                 <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
+                    type="date"
+                    id="date"
+                    name="date"
+                    value={formData.date}
                     onChange={handleChange}
                     required
                     className="w-full px-2 py-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
                 />
             </div>
             <div className="mb-4">
-                <label htmlFor="message" className="block text-gray-700 dark:text-gray-400 font-medium mb-1">Message</label>
+                <label htmlFor="message" className="block text-gray-700 dark:text-gray-400 font-medium mb-1">Additional Message</label>
                 <textarea
                     id="message"
                     name="message"
@@ -82,12 +82,12 @@ const ContactForm = () => {
                     onChange={handleChange}
                     rows="5"
                     required
-                    className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
+                    className="w-full px-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
                 ></textarea>
             </div>
-            <button type="submit" className="bg-indigo-600 text-white py-2 px-6 rounded-md text-lg hover:bg-indigo-700">Send Message</button>
+            <button type="submit" className="bg-indigo-600 text-white py-2 px-6 rounded-md text-lg hover:bg-indigo-700">Book Now</button>
         </form>
     );
 };
 
-export default ContactForm;
+export default BookingForm;

@@ -1,9 +1,13 @@
+import React from "react"
+import { useIsVisible } from "./useIsVisible";
 
 
 export default function Footer() {
+    const ref = React.useRef();
+    const isVisible1 = useIsVisible(ref);
 
     return (
-        <footer className="bg-charcoal-gray text-white py-8">
+        <footer ref={ref} className={`bg-charcoal-gray text-white py-8 transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex justify-between">
                     <div>

@@ -6,17 +6,18 @@ import { FaBars } from 'react-icons/fa6';
 import { CgClose } from 'react-icons/cg';
 import { usePathname } from 'next/navigation';
 
-const NavItem = ({ href, label, classPath }) => (
-  <Link href={href} className={`${classPath} hover:text-gray-600 px-3 py-2 rounded-md text-sm`}>{label}</Link>
-);
 
 export default function Navigation() {
     const pathName = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-
+    
     const toggleMenu = () => {
-    setIsOpen(!isOpen);
+        setIsOpen(!isOpen);
     };
+    
+    const NavItem = ({ href, label, classPath }) => (
+      <Link href={href} onClick={toggleMenu} className={`${classPath} hover:text-gray-600 px-3 py-2 rounded-md text-sm`}>{label}</Link>
+    );
 
     return (
         <nav className="bg-white dark:bg-gradient-to-r from-light-gray to-charcoal-gray shadow-lg sticky top-0 right-0 left-0 z-30">
