@@ -49,14 +49,14 @@ export function PortfolioItem({ item }) {
                 <Image
                     width={500}
                     height={500}
-                    src={item.imageUrl}
+                    src={item.imageUrl[0]}
                     alt={`${item.title} Image`}
                     className="object-cover object-center w-full h-72 transform group-hover:scale-105 transition duration-300"
                 />
             </div>
             <div className="mt-4">
                 <p className="text-lg font-semibold">{item.title}</p>
-                <p className="text-sm text-gray-600">{item.category}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{item.category}</p>
             </div>
         </Link>
     )
@@ -66,10 +66,10 @@ export function SocialMediaLinks() {
 
     return (
         <div className="flex space-x-4 text-2xl">
-            <a href="#" className="text-gray-600 hover:text-gray-800">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800">
                 <FaXTwitter />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800">
                 <FaInstagram />
             </a>
             {/* Add more social media icons as needed */}
