@@ -1,6 +1,7 @@
 'use client'
 
 import { CallToActionButton, FeaturedWorkCard, SocialMediaLinks, featuredWork } from '@/components/reuseable';
+import { Skeleton } from '@mui/material';
 import Link from 'next/link';
 import { FaGreaterThan } from 'react-icons/fa6';
 
@@ -17,9 +18,14 @@ export default function Home() {
       <section className="my-12">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Featured Work</h2>
         <section className="my-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {featuredWorkData.map((data, index) => (
+          {featuredWorkData
+          ? featuredWorkData.map((data, index) => (
             <FeaturedWorkCard key={index} featuredWork={data} />
-          ))}
+          ))
+          :
+          <Skeleton>
+            <FeaturedWorkCard />
+          </Skeleton>}
         </section>
       </section>
       <section className="my-12">

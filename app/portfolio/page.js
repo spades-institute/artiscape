@@ -1,4 +1,5 @@
 import { PortfolioItem } from '@/components/reuseable';
+import { Skeleton } from '@mui/material';
 
 // Dummy data for portfolio items
 export const portfolioItems = [
@@ -44,12 +45,18 @@ export default function PortfolioPage() {
         <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-6">Portfolio</h1>
             {/* Portfolio Grid */}
             <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {portfolioItems.map((item, index) => (
+                {portfolioItems
+                ?
+                portfolioItems.map((item, index) => (
                     <PortfolioItem
                         key={index}
                         item={item}
                     />
-                ))}
+                ))
+                :
+                <Skeleton>
+                  <PortfolioItem />
+                </Skeleton>}
             </section>
             {/* Filter Options */}
             {/* Individual Project Pages */}

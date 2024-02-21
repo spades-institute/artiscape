@@ -31,7 +31,7 @@ export const featuredWork = [
 export function PortfolioImageCard({ item, project }) {
 
     return (
-        <div className="bg-white shadow-lg dark:bg-light-gray px-2 pt-2 pb-4">
+        <div className="bg-white shadow-lg dark:bg-light-gray px-2 pt-2 pb-4 rounded">
             <Image width={500} height={500} src={item.url} alt={`${project.title + ' ' + 1} Image`} className="rounded w-auto" />
             <h2 className="font-bold text-gray-700 mt-2">{item.description}</h2>
         </div>
@@ -119,7 +119,7 @@ export function FeaturedWorkCard({ featuredWork }) {
             <Image width={500} height={500} className="w-full" src={featuredWork.imageUrl} alt={`${featuredWork.title} Image`} />
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{featuredWork.title}</div>
-                <p className="text-gray-700 text-base">{featuredWork.description}</p>
+                <p className="text-gray-700 dark:text-gray-500 text-base">{featuredWork.description}</p>
             </div>
         </div>
     )
