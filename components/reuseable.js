@@ -28,6 +28,24 @@ export const featuredWork = [
     },
 ];
 
+export function DarkModeBtn() {
+    const [darkMode, setDarkMode] = React.useState(false);
+  
+    const toggleDarkMode = () => {
+      setDarkMode(prevMode => !prevMode);
+      // Save user's preference in local storage or any other method
+      // localStorage.setItem('darkMode', !darkMode);
+    };
+  
+    return (
+        <div className={darkMode ? 'dark' : ''}>
+            {/* Toggle dark mode button */}
+            <button onClick={toggleDarkMode} className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-md shadow-md">
+                {darkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
+        </div>
+    );
+  };
 
 export function ServiceItemCard({ serviceItem }) {
 
