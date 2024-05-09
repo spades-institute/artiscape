@@ -35,7 +35,7 @@ export function PortfolioImageCard({ item, project }) {
     const isVisible1 = useIsVisible(ref);
 
     return (
-        <div className={`bg-white shadow-lg dark:bg-light-gray px-2 pt-2 pb-4 rounded transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
+        <div ref={ref} className={`bg-white shadow-lg dark:bg-light-gray px-2 pt-2 pb-4 rounded transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
             <Image width={500} height={500} src={item.url} alt={`${project.title + ' ' + 1} Image`} className="rounded w-auto" />
             <h2 className="font-bold text-gray-700 mt-2">{item.description}</h2>
         </div>

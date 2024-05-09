@@ -15,11 +15,13 @@ export default function Home() {
 
   return (
     <main className="max-w-7xl mx-auto px-4 py-8">
-      <section className="text-center">
+      <header className="text-center">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-indigo-600 mb-4">Welcome to Artiscape</h1>
         <p className="text-lg text-gray-600 dark:text-white mb-8">Showcasing creativity at its finest</p>
         <CallToActionButton link={'/portfolio'} title={"Explore Portfolio"} />
-      </section>
+      </header>
+
+      {/* Featured works */}
       <section className="my-12">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Featured Work</h2>
         <section className="my-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -35,6 +37,8 @@ export default function Home() {
           </Skeleton>}
         </section>
       </section>
+
+      {/* About Section */}
       <section className="my-12">
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">About Me</h2>
         <p ref={ref} className={`text-lg text-gray-600 mb-8 dark:text-gray-400 transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
@@ -44,6 +48,7 @@ export default function Home() {
         </p>
         <Link href="/about" className="flex items-center text-indigo-600 gap-2 rounded-md hover:text-white dark:hover:text-gray-600">Learn more <FaGreaterThan className='text-xs mt-0.5' /> </Link>
       </section>
+      
       <section ref={ref} className={`my-12 transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
         <h2 className="text-2xl font-bold text-gray-800 mb-4 dark:text-white">Contact Me</h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">Feel free to get in touch:</p>
