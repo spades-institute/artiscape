@@ -23,6 +23,7 @@ export default function Footer() {
                     <p className="text-sm text-white/70">&copy; 2024 Artiscape. All rights reserved.</p>
                 </div>
             </div>
+            <div className="mb-10 mt-4 flex items-center justify-center text-center"><span className="py-1 px-2 border-y rounded-md border-indigo-600 animate-pulse">Powered By Spades</span></div>
         </footer>
     )
 }  

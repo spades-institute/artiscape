@@ -137,6 +137,42 @@ export function FeaturedWorkCard({ featuredWork }) {
     )
 };
 
+export function BookingBtn() {
+    // state for scroll direction
+    const [prevScrollPosition,setPrevScrollPosition] = React.useState(0);
+    //state for overall navbar visibility on scroll
+    const [isNavbarVisible, setNavbarVisible] = React.useState(true);
+
+    //function to handle scroll events
+    const handleScroll = () => {
+        const currentScrollPosition = window.scrollY;
+
+        if (currentScrollPosition > prevScrollPosition) {
+        // scrolling down, hide the navbar
+        setNavbarVisible(false);
+        } else {
+        //scrolling up, show the NavBar
+        setNavbarVisible(true);
+        }
+
+        // update the previous scroll position
+        setPrevScrollPosition(currentScrollPosition);
+    };
+
+    // effect to add and remove event listener for scroll
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPosition]);
+
+    return (
+        <div className={`${isNavbarVisible || window.scrollY === 0 ? '-translate-y-0' : 'translate-y-14'} transform transition-transform duration-300 ease-in-out p-2 fixed bottom-0 left-0 right-0 bg-gradient-to-r from-gray-200 to-gray-400 dark:bg-gradient-to-r dark:from-charcoal-gray dark:to-light-gray shadow-inner z-20 flex items-center justify-center opacity-90"`}>
+            <CallToActionButton link={"/booking"} title={"Book Now!"} />
+        </div>
+    )
+
+}
+
 export default function AppLayout({ children }) {
     const pathName = usePathname();
     const [showScrollToTop, setShowScrollToTop] = React.useState(false);
@@ -176,9 +212,7 @@ export default function AppLayout({ children }) {
             null
             }
             <Footer />
-            {pathName !== "/booking" && <div className="p-2 sticky bottom-0 left-0 right-0 bg-gradient-to-r from-gray-200 to-gray-400 dark:bg-gradient-to-r dark:from-charcoal-gray dark:to-light-gray shadow-inner z-20 flex items-center justify-center opacity-90">
-                <CallToActionButton link={"/booking"} title={"Book Now!"} />
-            </div>}
+            {pathName !== "/booking" && <BookingBtn />}
         </>
     )
 };
