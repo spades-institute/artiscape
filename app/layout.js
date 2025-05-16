@@ -5,8 +5,8 @@ import AppLayout from "@/components/reuseable";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Artiscape",
-  description: "Portfolio website powered by spades",
+  title: "Siblings Photography Studios",
+  description: "Portfolio website powered by Spadeshub",
 };
 
 export default function RootLayout({ children }) {
