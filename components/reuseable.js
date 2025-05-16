@@ -5,30 +5,47 @@ import Navigation from "./navBar";
 import Footer from "./footer";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowUp, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import { FaArrowUp, FaInstagram, FaPinterest, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { useIsVisible } from "./useIsVisible";
 import { usePathname } from "next/navigation";
 
 export const featuredWork = [
     {
       id: 1,
-      title: 'Architecture Project',
-      imageUrl: '/architecture.jpg',
+      title: 'African Queen 👸',
+      imageUrl: '/african_queen.jpg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
     {
       id: 2,
-      title: 'Photography Series',
+      title: 'PhotoArt',
       imageUrl: '/photography-2.jpg',
       description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       id: 3,
-      title: 'Makeup Artistry Showcase',
-      imageUrl: '/make-up.jpg',
+      title: 'Time Passes Irrevobaly',
+      imageUrl: '/time.jpg',
       description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     },
 ];
+
+export function ContactInfo() {
+  const ref = React.useRef();
+  const isVisible1 = useIsVisible(ref);
+
+    return (
+        <section ref={ref} className={`my-12 transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 dark:text-white">Contact Information</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">Feel free to get in touch:</p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">Email: info@siblingsphotographystudio.com</p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">Phone: +1234567890</p>
+            <div className="flex justify-center">
+                <SocialMediaLinks />
+            </div>
+        </section>
+    )
+}
 
 export function PortfolioImageCard({ item, project }) {
     const ref = React.useRef();
@@ -66,7 +83,7 @@ export function ServiceItemCard({ serviceItem }) {
     const isVisible1 = useIsVisible(ref);
 
     return (
-        <div ref={ref} className={`bg-white shadow-md rounded-md p-6 mb-6 transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
+        <div ref={ref} className={`max-w-4xl bg-white shadow-md rounded-md p-6 mb-6 transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
             <h3 className="text-lg font-semibold mb-2">{serviceItem.title}</h3>
             <p className="text-gray-600 mb-2">{serviceItem.description}</p>
             <p className="text-gray-700 mb-1"><span className="font-semibold">Price:</span> {serviceItem.price}</p>
@@ -109,6 +126,12 @@ export function SocialMediaLinks() {
             </a>
             <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800">
                 <FaInstagram />
+            </a>
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800">
+                <FaPinterest />
+            </a>
+            <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-gray-800">
+                <FaYoutube />
             </a>
             {/* Add more social media icons as needed */}
         </div>

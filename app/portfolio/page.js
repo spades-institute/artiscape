@@ -5,19 +5,19 @@ import { Skeleton } from '@mui/material';
 export const portfolioItems = [
   {
     id: 1,
-    title: 'Architecture Project 1',
-    category: 'Architecture',
+    title: 'African Queen 👸',
+    category: 'Photography',
     imageUrl: [
-      { url: '/architecture.jpg', description: 'Image Description 1' },
-      { url: '/architecture.jpg', description: 'Image Description 2' },
-      { url: '/architecture.jpg', description: 'Image Description 3' },
-      { url: '/architecture.jpg', description: 'Image Description 4' },
+      { url: '/african_queen.jpg', description: 'Image Description 1' },
+      { url: '/african_queen.jpg', description: 'Image Description 2' },
+      { url: '/african_queen.jpg', description: 'Image Description 3' },
+      { url: '/african_queen.jpg', description: 'Image Description 4' },
     ],
   },
   {
     id: 2,
-    title: 'Photography Series 1',
-    category: 'Photography',
+    title: 'PhotoArt',
+    category: 'Photography Art',
     imageUrl: [
       { url: '/photography-2.jpg', description: 'Image Description 1' },
       { url: '/photography-1.jpg', description: 'Image Description 2' },
@@ -27,13 +27,13 @@ export const portfolioItems = [
   },
   {
     id: 3,
-    title: 'Makeup Artistry Showcase 1',
+    title: 'Time Passes Irrevobaly',
     category: 'Makeup Artistry',
     imageUrl: [
-      { url: '/make-up.jpg', description: 'Image Description 1' },
-      { url: '/make-up.jpg', description: 'Image Description 2' },
-      { url: '/make-up.jpg', description: 'Image Description 3' },
-      { url: '/make-up.jpg', description: 'Image Description 4' },
+      { url: '/time.jpg', description: 'Image Description 1' },
+      { url: '/time.jpg', description: 'Image Description 2' },
+      { url: '/time.jpg', description: 'Image Description 3' },
+      { url: '/time.jpg', description: 'Image Description 4' },
     ],
   },
   // Add more portfolio items as needed

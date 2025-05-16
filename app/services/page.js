@@ -4,10 +4,10 @@ import { ServiceItemCard } from "@/components/reuseable";
 const services = [
     {
       id: 1,
-      title: 'Architectural Design',
+      title: 'Premium Image Edits',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum urna at consectetur tincidunt. Cras euismod sollicitudin elit non dapibus.',
-      price: '$1000 - $5000',
-      duration: '1-3 months',
+      price: '$1000 - $3000',
+      duration: '1-3 days',
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const services = [
     },
     {
       id: 3,
-      title: 'Makeup Services',
+      title: 'Photography Art',
       description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.',
       price: '$50 - $200',
       duration: '30 minutes - 2 hours',
@@ -42,8 +42,8 @@ export default function ServicesPage() {
             {/* Testimonials */}
 
             {/* Call-to-Action */}
-            <div className="mt-8 text-center">
-                <a href="#" className="bg-indigo-600 text-white py-2 px-6 rounded-md text-lg hover:bg-indigo-700">Inquire Now</a>
+            <div className="mt-8 max-w-sm">
+                <a href="/booking" className="bg-indigo-600 text-white py-2 px-6 rounded-md text-lg hover:bg-indigo-700">Book Here</a>
             </div>
         </main>
     );

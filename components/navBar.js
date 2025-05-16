@@ -25,7 +25,7 @@ export default function Navigation() {
                 <div className="flex justify-between h-16">
                     <div className="flex">
                         <div className="flex-shrink-0 flex items-center">
-                            <Link href="/" className="font-bold text-2xl text-indigo-600 dark:animate-pulse">Artiscape</Link>
+                            <Link href="/" className="font-bold text-2xl text-indigo-600 dark:animate-pulse">Siblings Photography</Link>
                         </div>
                         <div className="hidden sm:-my-px sm:ml-6 sm:flex items-center">
                             <NavItem href="/" label="Home" classPath={pathName === "/" ? "text-primary dark:text-white font-bold" : "text-charcoal-gray font-medium"} />

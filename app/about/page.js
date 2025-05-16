@@ -3,23 +3,27 @@ import Image from "next/image";
 
 // Dummy data for the About Page
 const aboutData = {
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis diam nec odio ultrices interdum vel sit amet elit. Nulla facilisi. Vivamus at luctus purus. Duis id ex lacinia, volutpat orci vel, egestas magna. Vestibulum et libero sed velit tincidunt rhoncus nec ut libero. Nam sit amet lorem vel nisl feugiat fermentum. Duis rhoncus augue sit amet enim consequat, sit amet aliquam libero pharetra.",
+    bio: <div>
+            <p>SiblingsPhotography Studios is dedicated to delivering exceptional photography services to individuals, corporate organizations, couples, and families. We believe that powerful imagery has the ability to capture the essence of relationships, preserve cherished moments, and tell beautiful stories. 
+            </p>
+            <p>Our mission is to create lasting memories through a blend of creativity, authenticity, and joy. We approach every client with warmth and respect, treating them like family, and ensuring their unique stories are beautifully captured and preserved for generations to come.
+            </p>
+        </div>,
     skills: [
-      "Architecture Design",
+      "Photoshop",
       "Photography",
-      "Makeup Artistry",
-      "Graphic Design",
-      "Interior Design",
+      "Premium Photo Editing",
+      "Photography Art",
+      "Artistic Creativity",
     ],
     awards: [
-      "Best Architectural Design - 2020",
+      "Best Artistic Design - 2020",
       "Photographer of the Year - 2019",
-      "Makeup Artist of the Month - May 2021",
     ],
     photoGallery: [
-      "/architecture.jpg",
+      "/african_queen.jpg",
       "/photography-2.jpg",
-      "/make-up.jpg",
+      "/time.jpg",
       "/photography-1.jpg",
     ],
 };

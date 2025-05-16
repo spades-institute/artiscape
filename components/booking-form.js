@@ -36,7 +36,7 @@ const BookingForm = () => {
   };
 
     return (
-        <form ref={ref} onSubmit={handleSubmit} className={`max-w-lg mx-auto transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
+        <form ref={ref} onSubmit={handleSubmit} className={`max-w-lg transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
             <div className="mb-4">
                 <label htmlFor="name" className="block text-gray-700 dark:text-gray-400 font-medium mb-1">Name</label>
                 <input
