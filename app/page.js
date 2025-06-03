@@ -48,7 +48,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section ref={ref} className={`my-12 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
+      <section ref={ref} className={`my-12 transition-opacity ease-linear duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"} `}>
         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">About US</h2>
         <p className={`text-lg text-gray-600 mb-8 dark:text-gray-400 transition-opacity ease-linear duration-700 `}>
           SiblingsPhotography studios seeks to provide services to individuals, corporate organizations, couples, and families that emphasizes and enhances the quality of their relationships through photographic imaging. Our mission is to create lasting memories with fun, creativity and nativity in mind and is also determined to handle each and every client in a family like manner.
