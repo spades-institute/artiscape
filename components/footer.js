@@ -25,7 +25,7 @@ export default function Footer() {
                     <p className="text-sm text-white/70">&copy; {new Date().getFullYear()} Siblings Photography Studios. All rights reserved.</p>
                 </div>
             </div>
-            <div className="mb-10 mt-4 flex items-center justify-center text-center"><Link href={"https://instagram.spadeshub.com/"} className="py-1 px-2 border-y rounded-md border-indigo-600 animate-pulse">Powered By Spadeshub</Link></div>
+            <div className="mb-10 mt-4 flex items-center justify-center text-center"><Link href={"https://instagram.spadeshub.com/"} className="py-1 px-2 border-y rounded-md border-indigo-600 animate-pulse">Built By Spadeshub</Link></div>
         </footer>
     )
 }  
